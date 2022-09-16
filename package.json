@@ -1,0 +1,26 @@
+{
+	"name": "gigahub",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "cd server && npm install && npm start",
+		"server": "cd server && npm run dev",
+		"client": "cd client && npm start",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/avikonduru/gigahub.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/avikonduru/gigahub/issues"
+	},
+	"homepage": "https://github.com/avikonduru/gigahub#readme",
+	"devDependencies": {
+		"concurrently": "^5.3.0"
+	}
+}
